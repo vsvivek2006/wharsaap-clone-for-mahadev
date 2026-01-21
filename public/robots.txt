@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.mahadevbook.com/sitemap.xml
+
+# Block sensitive directories
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /tmp/
+Disallow: /private/
+
+# Block sensitive files
+Disallow: /config.php
+Disallow: /error_log
+
+# Allow important pages
+Allow: /about
+Allow: /contact
+Allow: /gallery
+Allow: /rooms
+Allow: /blog
+Allow: /betting-app
+Allow: /book-id
+Allow: /faq
+Allow: /terms
+Allow: /privacy
+
+# Allow assets (important for SEO & rendering)
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/

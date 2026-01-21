@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mahadev Book</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0b1220;
+    color:#fff;
+}
+
+/* ===== Top Bar ===== */
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 16px;
+    background:#ffffff;
+}
+
+.top-bar img{
+    width:28px;
+}
+
+.download-btn{
+    background:#22c55e;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:20px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* ===== Hero Section ===== */
+.hero{
+    background:#ffffff;
+    text-align:center;
+    padding:36px 16px 32px;
+}
+
+/* Image thodi aur badi */
+.logo{
+    width:230px;
+    height:auto;
+    display:block;
+    margin:0 auto 34px;
+}
+
+/* Continue to Chat button */
+.hero-btn{
+    background:#0d9488;
+    color:#ffffff;
+    padding:18px 42px;
+    border-radius:36px;
+    text-decoration:none;
+    display:inline-block;
+    font-size:18px;
+    margin-bottom:16px;
+}
+
+/* Text button ke niche */
+.hero p{
+    color:#444;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.hero span{
+    color:#0d9488;
+    font-weight:500;
+}
+
+/* ===== Content Section ===== */
+.section{
+    padding:18px;
+}
+
+.card{
+    background:linear-gradient(180deg,#0f1b33,#0b1220);
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:18px;
+}
+
+/* Center heading */
+.card h2{
+    margin-bottom:16px;
+    font-size:20px;
+    text-align:center;
+}
+
+/* 🔥 LIST CENTER FIX */
+.features{
+    list-style:none;
+    text-align:center;
+}
+
+.features li{
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+/* Tick + text center */
+.features li::before{
+    content:"✔ ";
+    color:#22c55e;
+}
+
+/* Join on WhatsApp button */
+.whatsapp-btn{
+    background:#22c55e;
+    color:#000;
+    display:block;
+    text-align:center;
+    padding:16px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:16px;
+}
+
+/* Desktop width limit */
+@media(min-width:600px){
+    body{
+        max-width:420px;
+        margin:auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== Top Bar ===== -->
+<div class="top-bar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    <a href="#" class="download-btn">Download</a>
+</div>
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+    <!-- Image -->
+    <img src="./photo.jpeg" alt="Mahadev Book" class="logo">
+
+    <!-- Auto WhatsApp message -->
+    <a href="https://wa.me/918969906425?text=Hello%20sir%20need%20id" class="hero-btn">
+        Continue to Chat
+    </a>
+
+    <p>
+        Hello, I want full information.<br>
+        Don’t have ChatApp yet? <span>Download</span>
+    </p>
+</div>
+
+<!-- ===== Content ===== -->
+<div class="section">
+
+    <div class="card">
+        <h2>Why Join Us?</h2>
+        <ul class="features">
+            <li>Fast Support</li>
+            <li>Easy Process</li>
+            <li>Trusted Service</li>
+            <li>24×7 Available</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Join Now</h2>
+        <p style="text-align:center;">
+            Click below and connect instantly on WhatsApp.
+        </p>
+        <br>
+        <a href="https://wa.me/233200656166?text=Hello%20sir%20need%20id" class="whatsapp-btn">
+            Join on WhatsApp
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
