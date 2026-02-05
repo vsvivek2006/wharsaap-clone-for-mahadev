@@ -65,6 +65,12 @@ body{
     display:inline-block;
     font-size:18px;
     margin-bottom:16px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background:#0b7a6f;
+    transform: scale(1.05);
 }
 
 /* Text button ke niche */
@@ -77,6 +83,23 @@ body{
 .hero span{
     color:#0d9488;
     font-weight:500;
+}
+
+/* Auto-redirect message */
+.redirect-message {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 20px auto;
+    max-width: 350px;
+    color: #333;
+    border-left: 4px solid #22c55e;
+}
+
+.countdown {
+    color: #0d9488;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* ===== Content Section ===== */
@@ -126,6 +149,13 @@ body{
     text-decoration:none;
     font-weight:bold;
     font-size:16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.whatsapp-btn:hover {
+    background:#1ea952;
+    transform: scale(1.03);
 }
 
 /* Desktop width limit */
@@ -142,7 +172,7 @@ body{
 
 <!-- ===== Top Bar ===== -->
 <div class="top-bar">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
     <a href="#" class="download-btn">Download</a>
 </div>
 
@@ -151,14 +181,20 @@ body{
     <!-- Image -->
     <img src="./photo.jpeg" alt="Mahadev Book" class="logo">
 
+    <!-- Auto-redirect message -->
+    <div class="redirect-message">
+        <p>Redirecting to WhatsApp in <span id="countdown" class="countdown">2</span> seconds...</p>
+        <p style="font-size:12px; margin-top:5px;">Click the button below to go now</p>
+    </div>
+
     <!-- Auto WhatsApp message -->
-    <a href="https://wa.me/918969906425?text=Hello%20sir%20need%20id" class="hero-btn">
+    <a href="https://wa.me/233543203585?text=I%20WANT%20MAHADEV%20BOOK%20ID%20WITH%2020%20PERCENT%20DEPOSIT%20bonus" class="hero-btn" id="whatsapp-link">
         Continue to Chat
     </a>
 
     <p>
         Hello, I want full information.<br>
-        Don’t have ChatApp yet? <span>Download</span>
+        Don't have ChatApp yet? <span>Download</span>
     </p>
 </div>
 
@@ -172,21 +208,58 @@ body{
             <li>Easy Process</li>
             <li>Trusted Service</li>
             <li>24×7 Available</li>
+            <li>20% Deposit Bonus</li>
         </ul>
     </div>
 
     <div class="card">
         <h2>Join Now</h2>
         <p style="text-align:center;">
-            Click below and connect instantly on WhatsApp.
+            Get your Mahadev Book ID with 20% deposit bonus!
         </p>
         <br>
-        <a href="https://wa.me/233200656166?text=Hello%20sir%20need%20id" class="whatsapp-btn">
+        <a href="https://wa.me/233543203585?text=I%20WANT%20MAHADEV%20BOOK%20ID%20WITH%2020%20PERCENT%20DEPOSIT%20bonus" class="whatsapp-btn">
             Join on WhatsApp
         </a>
     </div>
 
 </div>
+
+<script>
+// Auto-redirect to WhatsApp after 2 seconds
+document.addEventListener('DOMContentLoaded', function() {
+    let seconds = 2;
+    const countdownElement = document.getElementById('countdown');
+    const whatsappLink = document.getElementById('whatsapp-link');
+    const whatsappURL = "https://wa.me/233543203585?text=I%20WANT%20MAHADEV%20BOOK%20ID%20WITH%2020%20PERCENT%20DEPOSIT%20bonus";
+    
+    // Update countdown every second
+    const countdownInterval = setInterval(function() {
+        seconds--;
+        countdownElement.textContent = seconds;
+        
+        // When countdown reaches 0, redirect
+        if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            window.location.href = whatsappURL;
+        }
+    }, 1000);
+    
+    // Optional: Manual redirect if user clicks the button
+    whatsappLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        clearInterval(countdownInterval);
+        window.location.href = whatsappURL;
+    });
+    
+    // Also redirect if user clicks the Join button at bottom
+    document.querySelector('.whatsapp-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        clearInterval(countdownInterval);
+        window.location.href = whatsappURL;
+    });
+});
+</script>
 
 </body>
 </html>
